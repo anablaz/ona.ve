@@ -1,26 +1,173 @@
-<h1>Welcome to Ona.ve</h1>
+{% extends 'base.html.twig' %}
 
-{# read and display just one flash message type #}
-{% for message in app.flashes('notice') %}
-    <div class="flash-notice">
-        {{ message }}
+{% block title %}Ona.ve{% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/index.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="background">
+        <div class="container">
+            <div class="row pb-5">
+                <div class="col-lg-6" style="padding-top: 10ex;">
+                    <h1>Poišči</h1>  <br>
+                    <h1>strokovnjakinjo</h1>
+                    <br>
+                    <h3 class="fst-italic mt-5">Tekst, ki opisuje storitev oz. spletno mesto</h3>
+
+                    <div class="input-group widebar input-group-lg pt-5">
+                        <input type="text" style="border-radius: 0;" class="form-control" placeholder="value"
+                               aria-label="search">
+                        <div class="input-group-append">
+                            <button class="btn btn-danger btn-lg " style="border-radius: 0; height: 10ex; width: 10ex;"
+                                    type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img style="padding-top: 5ex; height: 75vh; " alt="img" src="{{ asset('images/strokovnjakinja.png') }}">
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <h1>O projektu </h1>
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                </div>
+
+                <div class="col-lg-12  mt-5">
+                    <h3>
+                        PROJEKTI
+                    </h3>
+                </div>
+                <div class="col-lg-8 mt-3">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <div class="col-lg-4 mt-3 text-center">
+                    <button class="btn btn-outline-primary btn-lg" style="color: darkblue; border-radius: 0; ">Preberi
+                        več
+                    </button>
+                </div>
+
+            </div>
+            <div class="row " style="margin-top: 100px;">
+                <div class="col-lg-12">
+                    <h1>Dogodki </h1>
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                </div>
+
+                <div class="col-lg-4 mt-5">
+                    <div class="card" style="width: 80%;">
+                        <img class="card-img-top" style="width: auto; height: 200px;" src="{{ asset('images/vile.png') }}"
+                             alt="Card image vile">
+                        <div class="card-body">
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmo...</p>
+                            <span class="mt-1">5 min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-5">
+                    <div class="card" style="width: 80%;">
+                        <img class="card-img-top" style="width: auto; height: 200px;" src="{{ asset('images/present.png') }}"
+                             alt="Card image presenting">
+                        <div class="card-body">
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmo...</p>
+                            <span class="mt-1">3 min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-5">
+                    <div class="card" style="width: 80%;">
+                        <img class="card-img-top" style="width: auto; height: 200px;" src="{{ asset('images/rocket.png') }}"
+                             alt="Card image rocket">
+                        <div class="card-body">
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmo...</p>
+                            <span class="mt-1">4 min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12" style="height: 10vh;">
+                    &nbsp;
+                </div>
+            </div>
+
+        </div>
+
     </div>
-{% endfor %}
-
-{# read and display several types of flash messages #}
-{% for label, messages in app.flashes(['success', 'warning']) %}
-    {% for message in messages %}
-        <div class="flash-{{ label }}">
-            {{ message }}
+    <footer class="row" style="width: 100%; margin-top: 50px;">
+        <div class="col-lg-4 text-center">
+            <img alt="" src="{{ asset('images/onavelogo.png') }}" style="width: auto; height: 30vh;">
         </div>
-    {% endfor %}
-{% endfor %}
+        <div class="col-lg-8 ">
+            <div class="row ">
+                <div class="input-group mx-auto" style="width: 80%;">
+                    <input type="text" style="border-radius: 0;" class="form-control" placeholder="Elektronski naslov"
+                           aria-label="apply">
+                    <div class="input-group-append">
+                        <button class="btn btn-danger btn-sm" style="border-radius: 0; height: 5ex; " type="button">
+                            Prijavi se na e-novičke!
+                        </button>
+                    </div>
+                </div>
 
-{# read and display all flash messages #}
-{% for label, messages in app.flashes %}
-    {% for message in messages %}
-        <div class="flash-{{ label }}">
-            {{ message }}
+            </div>
+            <div class="row mx-auto" style="width: 80%;">
+                <div class="col-lg-3 mx-auto mt-5">
+                    <a routerLink="#" class=" fw-light"
+                       style="text-decoration: none; color: darkblue; font-size: large">
+                        Terms of Service
+                    </a>
+                </div>
+                <div class="col-lg-3 mx-auto mt-5">
+                    <a routerLink="#" class=" fw-light"
+                       style="text-decoration: none; color: darkblue; font-size: large">
+                        Privacy Policy
+                    </a>
+                </div>
+                <div class="col-lg-3 mx-auto mt-5">
+                    <a routerLink="#" class=" fw-light"
+                       style="text-decoration: none; color: darkblue; font-size: large">
+                        Legal Details
+                    </a>
+                </div>
+                <div class="col-lg-3 mx-auto mt-5">
+                    <a routerLink="#" class=" fw-light"
+                       style="text-decoration: none; color: darkblue; font-size: large">
+                        FAQ
+                    </a>
+                </div>
+            </div>
+            <div class="row mx-auto"
+                 style="width: 80%; margin-top: 50px; border-top: darkblue solid 2px; padding-top: 15px;">
+                <div class="d-flex justify-content-between text-center">
+                    <p class="mt-2">2021 OnaVe All rights reserved</p>
+
+                    <div class="d-flex justify-content-between">
+                        <i class="fab fa-facebook-square fa-3x mx-3"></i>
+                        <i class="fab fa-linkedin fa-3x mx-3 "></i>
+                        <i class="fab fa-instagram-square fa-3x mx-3"></i>
+                    </div>
+                </div>
+            </div>
         </div>
-    {% endfor %}
-{% endfor %}
+    </footer>
+{% endblock %}
