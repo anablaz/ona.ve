@@ -2,6 +2,10 @@
 
 {% block title %}Register{% endblock %}
 
+{% block stylesheets %}
+    <link href="{{ asset('bundles/craueformflow/css/buttons.css') }}" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
     <h1>Register</h1>
     {% include '@CraueFormFlow/FormFlow/stepList.html.twig' %}
