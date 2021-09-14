@@ -1,19 +1,47 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Pridruži se{% endblock %}
 
 {% block stylesheets %}
     <link href="{{ asset('bundles/craueformflow/css/buttons.css') }}" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
-    <h1>Register</h1>
-    {% include '@CraueFormFlow/FormFlow/stepList.html.twig' %}
-    {{ form_start(registrationForm) }}
-    {{ form_errors(registrationForm) }}
+    <div class="row" style="width: 100%">
+        <div class="col-lg-8" >
+            <div class="container" style="margin-left: 15%; margin-right: 15%; width: 70%">
+                <div class="row">
 
-    {{ form_rest(registrationForm) }}
+                    <h1 class="mt-5 mb-5" style="color: darkblue; font-weight: 600">Pridruži se</h1>
+                </div>
+                <div class="row">
+                    {% include '@CraueFormFlow/FormFlow/stepList_content.html.twig' %}
 
-    {% include '@CraueFormFlow/FormFlow/buttons.html.twig' %}
-    {{ form_end(registrationForm) }}
+                </div>
+
+                {{ form_start(registrationForm) }}
+                {{ form_errors(registrationForm) }}
+
+                {{ form_rest(registrationForm) }}
+
+                {% include '@CraueFormFlow/FormFlow/buttons.html.twig' with {
+                craue_formflow_button_class_last: 'btn btn-danger mx-1 my-3',
+                craue_formflow_button_class_finish: 'btn btn-danger mx-1 my-3',
+                craue_formflow_button_class_next: 'btn btn-danger mx-1 my-3',
+                craue_formflow_button_class_back: 'btn btn-danger mx-1 my-3',
+                craue_formflow_button_class_reset: 'btn btn-danger mx-1 my-3'}
+                %}
+                {{ form_end(registrationForm) }}
+            </div>
+
+        </div>
+        <div class="col-lg-4 text-center" >
+            <div class="aroundcontainer"  style="width:100%; height: 80vh; overflow: hidden">
+
+                <img alt="img" src="{{ asset('images/strokovnjakinja.jpg') }}" style="width: auto; height: 100vh">
+            </div>
+        </div>
+
+    </div>
+
 {% endblock %}
