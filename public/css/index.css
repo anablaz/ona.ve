@@ -1,46 +1,43 @@
-
 h1 {
     color: darkblue;
-    font-size: 8ex;
-
-  }
+}
 
 h3 {
-  color:darkblue;
-  font-size: 3ex;
-
+    color: darkblue;
 }
-p{
-  color: darkblue;
+
+p {
+    color: darkblue;
 }
 
 .widebar {
-  width: 130%;
+    width: 130%;
 }
 
 @media only screen and (max-width: 992px) {
-  .widebar{
-    width: 90%;
-  }
-}
-.background{
-  background-color: whitesmoke;
+    .widebar {
+        width: 90%;
+    }
 }
 
-.line1{
-  background-color: darkred;
-  width: 25ex;
-  height: 1ex;
-  position: relative;
-  top: 5px;
-  float: left;
+.background {
+    background-color: whitesmoke;
 }
 
-.line2{
-  background-color: darkblue;
-  width: 25ex;
-  height: 1ex;
-  position: relative;
-  top: 5px;
-  float: left;
+.line1 {
+    background-color: darkred;
+    width: 25ex;
+    height: 1ex;
+    position: relative;
+    top: 5px;
+    float: left;
+}
+
+.line2 {
+    background-color: darkblue;
+    width: 25ex;
+    height: 1ex;
+    position: relative;
+    top: 5px;
+    float: left;
 }
