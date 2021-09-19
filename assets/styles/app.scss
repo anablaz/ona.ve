@@ -1,0 +1,7 @@
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+
+.bg-navbar {
+  background: rgb(230, 230, 230);
+  background: linear-gradient(90deg, rgba(230, 230, 230, 1) 0%, rgba(249, 249, 249, 1) 35%, rgba(226, 226, 226, 1) 100%);
+}

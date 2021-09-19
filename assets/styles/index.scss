@@ -1,14 +1,4 @@
-h1 {
-    color: darkblue;
-}
-
-h3 {
-    color: darkblue;
-}
-
-p {
-    color: darkblue;
-}
+@import "variables";
 
 .widebar {
     width: 130%;
@@ -20,12 +10,8 @@ p {
     }
 }
 
-.background {
-    background-color: whitesmoke;
-}
-
 .line1 {
-    background-color: darkred;
+    background-color: $red;
     width: 25ex;
     height: 1ex;
     position: relative;
@@ -34,7 +20,7 @@ p {
 }
 
 .line2 {
-    background-color: darkblue;
+    background-color: $body-color;
     width: 25ex;
     height: 1ex;
     position: relative;

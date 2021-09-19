@@ -1,0 +1,14 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+$body-bg: $gray-100;
+$body-color: $blue-800;
+$primary: $red;
+$link-color: $body-color;
+$navbar-light-color: $body-color;
+
+$custom-colors: (
+        "primary": $primary,
+        "text": $body-color
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
