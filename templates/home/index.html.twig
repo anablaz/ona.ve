@@ -11,14 +11,13 @@
         <div class="container">
             <div class="row pb-5">
                 <div class="col-lg-6" style="padding-top: 10ex;">
-                    <h1>Poišči</h1>  <br>
-                    <h1>strokovnjakinjo</h1>
+                    <h1 style="font-weight: 600; font-size: 400%">Poišči<br> strokovnjakinjo</h1>
                     <br>
                     <h3 class="fst-italic mt-5">Tekst, ki opisuje storitev oz. spletno mesto</h3>
 
                     <div class="input-group widebar input-group-lg pt-5">
-                        <input type="text" style="border-radius: 0;" class="form-control" placeholder="value"
-                               aria-label="search">
+                        <input type="text" style="border-radius: 0;height: 10ex" class="form-control"
+                               placeholder="Išči po ključnih besedah" aria-label="search">
                         <div class="input-group-append">
                             <button class="btn btn-danger btn-lg " style="border-radius: 0; height: 10ex; width: 10ex;"
                                     type="button">
@@ -30,7 +29,8 @@
 
                 </div>
                 <div class="col-lg-6 text-center">
-                    <img style="padding-top: 5ex; height: 75vh; " alt="img" src="{{ asset('images/strokovnjakinja.jpg') }}">
+                    <img style="padding-top: 5ex; height: 75vh; " alt="img"
+                         src="{{ asset('images/strokovnjakinja.jpg') }}">
                 </div>
             </div>
 
@@ -71,7 +71,8 @@
 
                 <div class="col-lg-4 mt-5">
                     <div class="card" style="width: 80%;">
-                        <img class="card-img-top" style="width: auto; height: 200px;" src="{{ asset('images/vile.png') }}"
+                        <img class="card-img-top" style="width: auto; height: 200px;"
+                             src="{{ asset('images/vile.png') }}"
                              alt="Card image vile">
                         <div class="card-body">
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -83,7 +84,8 @@
 
                 <div class="col-lg-4 mt-5">
                     <div class="card" style="width: 80%;">
-                        <img class="card-img-top" style="width: auto; height: 200px;" src="{{ asset('images/present.png') }}"
+                        <img class="card-img-top" style="width: auto; height: 200px;"
+                             src="{{ asset('images/present.png') }}"
                              alt="Card image presenting">
                         <div class="card-body">
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -95,7 +97,8 @@
 
                 <div class="col-lg-4 mt-5">
                     <div class="card" style="width: 80%;">
-                        <img class="card-img-top" style="width: auto; height: 200px;" src="{{ asset('images/rocket.png') }}"
+                        <img class="card-img-top" style="width: auto; height: 200px;"
+                             src="{{ asset('images/rocket.png') }}"
                              alt="Card image rocket">
                         <div class="card-body">
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -113,55 +116,58 @@
         </div>
 
     </div>
-    <footer class="row" style="width: 100%; margin-top: 50px;">
-        <div class="col-lg-4 text-center">
-            <img alt="" src="{{ asset('images/onavelogo.png') }}" style="width: auto; height: 30vh;">
-        </div>
-        <div class="col-lg-8 ">
-            <div class="row ">
-                <div class="input-group mx-auto" style="width: 80%;">
-                    {{ form(form) }}
-                </div>
-
+    <div style=" background: rgb(222,222,222);
+background: linear-gradient(90deg, rgba(222,222,222,1) 0%, rgba(249,249,249,1) 35%, rgba(223,223,223,1) 100%); ">
+        <footer class="row" style="width: 100%; padding-top: 50px; ">
+            <div class="col-lg-4 text-center">
+                <img alt="" src="{{ asset('images/onavelogo.png') }}" style="width: auto; height: 20vh;">
             </div>
-            <div class="row mx-auto" style="width: 80%;">
-                <div class="col-lg-3 mx-auto mt-5">
-                    <a href="{{path('app_home_terms')}}" class=" fw-light"
-                       style="text-decoration: none; color: darkblue; font-size: large">
-                        Terms of Service
-                    </a>
-                </div>
-                <div class="col-lg-3 mx-auto mt-5">
-                    <a routerLink="#" class=" fw-light"
-                       style="text-decoration: none; color: darkblue; font-size: large">
-                        Privacy Policy
-                    </a>
-                </div>
-                <div class="col-lg-3 mx-auto mt-5">
-                    <a routerLink="#" class=" fw-light"
-                       style="text-decoration: none; color: darkblue; font-size: large">
-                        Legal Details
-                    </a>
-                </div>
-                <div class="col-lg-3 mx-auto mt-5">
-                    <a routerLink="#" class=" fw-light"
-                       style="text-decoration: none; color: darkblue; font-size: large">
-                        FAQ
-                    </a>
-                </div>
-            </div>
-            <div class="row mx-auto"
-                 style="width: 80%; margin-top: 50px; border-top: darkblue solid 2px; padding-top: 15px;">
-                <div class="d-flex justify-content-between text-center">
-                    <p class="mt-2">2021 OnaVe All rights reserved</p>
+            <div class="col-lg-8 ">
+                <div class="row ">
+                    <div class="input-group mx-auto" style="width: 80%;">
+                        {{ form(form) }}
+                    </div>
 
-                    <div class="d-flex justify-content-between">
-                        <i class="fab fa-facebook-square fa-3x mx-3"></i>
-                        <i class="fab fa-linkedin fa-3x mx-3 "></i>
-                        <i class="fab fa-instagram-square fa-3x mx-3"></i>
+                </div>
+                <div class="row mx-auto" style="width: 80%;">
+                    <div class="col-lg-3 mx-auto mt-5">
+                        <a href="{{ path('app_home_terms') }}" class=" fw-light"
+                           style="text-decoration: none; color: darkblue; font-size: large">
+                            Terms of Service
+                        </a>
+                    </div>
+                    <div class="col-lg-3 mx-auto mt-5">
+                        <a href="#" class=" fw-light"
+                           style="text-decoration: none; color: darkblue; font-size: large">
+                            Privacy Policy
+                        </a>
+                    </div>
+                    <div class="col-lg-3 mx-auto mt-5">
+                        <a href="#" class=" fw-light"
+                           style="text-decoration: none; color: darkblue; font-size: large">
+                            Legal Details
+                        </a>
+                    </div>
+                    <div class="col-lg-3 mx-auto mt-5">
+                        <a href="#" class=" fw-light"
+                           style="text-decoration: none; color: darkblue; font-size: large">
+                            FAQ
+                        </a>
+                    </div>
+                </div>
+                <div class="row mx-auto"
+                     style="width: 80%; margin-top: 50px; border-top: darkblue solid 2px; padding-top: 15px;">
+                    <div class="d-flex justify-content-between text-center">
+                        <p class="mt-2">2021 OnaVe All rights reserved</p>
+
+                        <div class="d-flex justify-content-between">
+                            <i class="fab fa-facebook-square fa-3x mx-3"></i>
+                            <i class="fab fa-linkedin fa-3x mx-3 "></i>
+                            <i class="fab fa-instagram-square fa-3x mx-3"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 {% endblock %}
