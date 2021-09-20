@@ -49,4 +49,13 @@ class HomeController extends AbstractController
     {
         return $this->render('home/terms.html.twig');
     }
+
+    /**
+     * @Route("/coming-soon")
+     */
+    public function comingSoon(): Response
+    {
+        return $this->render('home/coming_soon.html.twig');
+    }
+
 }
