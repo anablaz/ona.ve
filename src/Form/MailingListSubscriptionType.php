@@ -14,9 +14,12 @@ class MailingListSubscriptionType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('email', EmailType::class)
-            ->add('save', SubmitType::class)
-        ;
+            ->add('email', EmailType::class, [
+                'label' => false,
+            ])
+            ->add('save', SubmitType::class, [
+                'label' => "Prijavi se na e-novice!",
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)
