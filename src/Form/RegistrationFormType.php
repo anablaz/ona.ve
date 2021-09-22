@@ -56,7 +56,7 @@ class RegistrationFormType extends AbstractType
                         'label' => 'Ustanova',
                     ])
                     ->add('phone', TelType::class, [
-                        'label' => 'Telefonska številka',
+                        'label' => 'Telefon',
                     ])
                     ->add('cv', TextareaType::class, [
                         'label' => 'Nekaj stavkov o meni',
@@ -82,15 +82,6 @@ class RegistrationFormType extends AbstractType
                     ->add('keywords', TextType::class, [
                         'label' => 'Ključne besede',
                     ])
-                    ->add('agreePrivacy', CheckboxType::class, [
-                        'label' => 'Strinjam se s politiko zasebnosti.',
-                            'mapped' => false,
-                            'constraints' => [
-                                new IsTrue([
-                                    'message' => 'Strinjam se s politiko zasebnosti.',
-                                ]),
-                            ],
-                        ])
                     ->add('agreeTerms', CheckboxType::class, [
                         'label' => 'Strinjam se s pogoji uporabe.',
                         'mapped' => false,
