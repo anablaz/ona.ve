@@ -8,15 +8,15 @@ class RegistrationFlow extends \Craue\FormFlowBundle\Form\FormFlow
     {
         return [
             [
-                'label' => 'step1',
+                'label' => 'Korak 1',
                 'form_type' => RegistrationFormType::class,
             ],
             [
-                'label' => 'step2',
+                'label' => 'Korak 2',
                 'form_type' => RegistrationFormType::class,
             ],
             [
-                'label' => 'step3',
+                'label' => 'Korak 3',
                 'form_type' => RegistrationFormType::class,
             ]
         ];
