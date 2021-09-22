@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block javascripts %}
-    {{ encore_entry_link_tags('app_home_index') }}
+    {{ encore_entry_script_tags('app_home_index') }}
 {% endblock %}
 
 {% block content %}
@@ -120,8 +120,8 @@
 {% endblock %}
 
 {% block footerContent %}
-    <div class="row">
-        <div class="input-group mx-auto" style="width: 80%;">
+    <div class="row pt-3">
+        <div class="input-group mx-auto mailing_list_subscription" style="width: 80%;">
             {{ form(form) }}
         </div>
     </div>

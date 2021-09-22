@@ -16,6 +16,7 @@ class MailingListSubscriptionType extends AbstractType
         $builder
             ->add('email', EmailType::class, [
                 'label' => false,
+                'attr' => ['placeholder' => 'Vnesi email naslov'],
             ])
             ->add('save', SubmitType::class, [
                 'label' => "Prijavi se na e-novice!",

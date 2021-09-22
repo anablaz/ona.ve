@@ -1,0 +1,55 @@
+@import "variables";
+
+.widebar {
+  width: 130%;
+}
+
+@media only screen and (max-width: 992px) {
+  .widebar {
+    width: 90%;
+  }
+}
+
+.line1 {
+  background-color: $red;
+  width: 25ex;
+  height: 1ex;
+  position: relative;
+  top: 5px;
+  float: left;
+}
+
+.line2 {
+  background-color: $body-color;
+  width: 25ex;
+  height: 1ex;
+  position: relative;
+  top: 5px;
+  float: left;
+}
+
+.mailing_list_subscription > form {
+  width: 100%;
+
+  > div {
+    display: flex;
+    width: 100%;
+
+    > :nth-child(1) {
+      flex: 3 0 auto;
+    }
+
+    > :nth-child(2) {
+      flex: 2 0 auto;
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    .form-control {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
