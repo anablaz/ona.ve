@@ -57,6 +57,7 @@ class RegistrationFormType extends AbstractType
                     ])
                     ->add('phone', TelType::class, [
                         'label' => 'Telefon',
+                        'required' => false,
                     ])
                     ->add('cv', TextareaType::class, [
                         'label' => 'Nekaj stavkov o meni',

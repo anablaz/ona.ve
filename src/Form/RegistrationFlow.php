@@ -2,7 +2,9 @@
 
 namespace App\Form;
 
-class RegistrationFlow extends \Craue\FormFlowBundle\Form\FormFlow
+use Craue\FormFlowBundle\Form\FormFlow;
+
+class RegistrationFlow extends FormFlow
 {
     protected function loadStepsConfig()
     {
