@@ -25,10 +25,17 @@ class RegistrationFormType extends AbstractType
         switch ($options['flow_step']) {
             case 1:
                 $builder
-                    ->add('first_name', TextType::class)
-                    ->add('last_name', TextType::class)
-                    ->add('email', EmailType::class)
+                    ->add('first_name', TextType::class, [
+                        'label' => 'Ime',
+                    ])
+                    ->add('last_name', TextType::class, [
+                        'label' => 'Priimek',
+                    ])
+                    ->add('email', EmailType::class, [
+                        'label' => 'E-pošta',
+                    ])
                     ->add('plainPassword', PasswordType::class, [
+                        'label' => 'Geslo',
                         'attr' => ['autocomplete' => 'new-password'],
                         'constraints' => [
                             new NotBlank([
@@ -45,10 +52,17 @@ class RegistrationFormType extends AbstractType
                 break;
             case 2:
                 $builder
-                    ->add('institution', TextType::class)
-                    ->add('phone', TelType::class)
-                    ->add('cv', TextareaType::class)
+                    ->add('institution', TextType::class, [
+                        'label' => 'Ustanova',
+                    ])
+                    ->add('phone', TelType::class, [
+                        'label' => 'Telefonska številka',
+                    ])
+                    ->add('cv', TextareaType::class, [
+                        'label' => 'Nekaj stavkov o meni',
+                    ])
                     ->add('photo', FileType::class, [
+                        'label' => 'Moja fotografija',
                         'constraints' => [
                             new File([
                                 'maxSize' => '1023k',
@@ -62,21 +76,27 @@ class RegistrationFormType extends AbstractType
                 break;
             case 3:
                 $builder
-                    ->add('languages', TextType::class)
-                    ->add('keywords', TextType::class)
+                    ->add('languages', TextType::class, [
+                        'label' => 'Jeziki',
+                    ])
+                    ->add('keywords', TextType::class, [
+                        'label' => 'Ključne besede',
+                    ])
                     ->add('agreePrivacy', CheckboxType::class, [
+                        'label' => 'Strinjam se s politiko zasebnosti.',
                             'mapped' => false,
                             'constraints' => [
                                 new IsTrue([
-                                    'message' => 'You should agree to our privacy policy.',
+                                    'message' => 'Strinjam se s politiko zasebnosti.',
                                 ]),
                             ],
                         ])
                     ->add('agreeTerms', CheckboxType::class, [
+                        'label' => 'Strinjam se s pogoji uporabe.',
                         'mapped' => false,
                         'constraints' => [
                             new IsTrue([
-                                'message' => 'You should agree to our terms and conditions.',
+                                'message' => 'Strinjam se s pogoji uporabe.',
                             ]),
                         ],
                     ]);
